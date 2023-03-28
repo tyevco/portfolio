@@ -12,7 +12,8 @@ export function fetchResume(resumeId: string) {
                             city: "Seven Hills",
                             state: "Ohio"
                         },
-                        phone: "+13307034702"
+                        phone: "+13307034702",
+                        linkedIn: "https://www.linkedin.com/in/tylercoles/"
                     },
                     qualifications: "As an accomplished software engineer, I specialize in full-stack development and take pride in crafting clear and maintainable code. My exceptional problem-solving abilities, combined with a self-driven attitude, enable me to efficiently complete tasks. I have a proven track record of collaborating with and mentoring colleagues, which fosters a friendly and productive workplace. Always eager to tackle challenges and develop innovative solutions, I constantly strive to fulfill business and customer needs. Furthermore, I am committed to staying current with emerging technologies and industry trends, ensuring that I maintain a competitive edge.",
                     skills: [

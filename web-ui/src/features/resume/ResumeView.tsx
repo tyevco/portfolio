@@ -9,7 +9,7 @@ import {
 import { useForm, Controller } from "react-hook-form";
 
 import Button from 'react-bootstrap/Button';
-import { Form } from 'react-bootstrap';
+import { Form, Stack } from 'react-bootstrap';
 import { Resume } from './Resume';
 
 //import styles from './Resume.module.css';
@@ -31,17 +31,18 @@ export function ResumeView() {
       <>
         {status === 'idle' && (
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <Controller
-              name="resumeId"
-              control={control}
-              render={({ field }) => <Form.Group>
-                <Form.Label htmlFor="resumeId">Resume Id</Form.Label>
-                <Form.Control {...field} />
-              </Form.Group>}
-            />
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            <Stack gap={2} direction="horizontal">
+              <Controller
+                name="resumeId"
+                control={control}
+                render={({ field }) => <Form.Group>
+                  <Form.Control {...field} placeholder="Resume Id..."/>
+                </Form.Group>}
+              />
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Stack>
           </Form>
         )}
         {status === 'loading' && (
